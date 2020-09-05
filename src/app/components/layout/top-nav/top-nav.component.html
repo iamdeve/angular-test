@@ -1,0 +1,44 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button
+      mat-icon-button
+      (click)="drawerToggled()"
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="search-input-container">
+      <img src="../../../../assets/images/magnify-glass.png" alt="search" />
+      <input class="search-input" placeholder="Security Companies" value="" />
+    </div>
+
+    <span class="example-spacer"></span>
+    <button mat-raised-button class="btn-jobs" color="primary">Jobs</button>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with bell icon"
+    >
+      <span class="badge-notification">
+        <span>5</span>
+      </span>
+      <img src="../../../../assets/images/bell.png" alt="notifications" />
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with message icon"
+    >
+      <span class="badge-message">
+        <span>6</span>
+      </span>
+      <img src="../../../../assets/images/message.png" alt="message" />
+    </button>
+
+    <span class="profile">
+      <img src="../../../../assets/images/profile.png" alt="profile" />
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "aakar";
+  font-style: normal;
+  font-weight: normal;
+  src: local("aakar"),
+    url("/assets/font/e5c0322494ad20be2e41f93c2422ddcbd7868d6b\ aakar-medium.woff aakar-medium.woff")
+      format("woff");
+}
+body {
+  margin: 0;
+  font-family: aakar, "aakar Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,31 @@
+.chat-button {
+  position: absolute;
+  background: #1b56ab;
+  width: 8rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* right: 8vh; */
+  /* bottom: 2rem; */
+  z-index: 99;
+  font-size: 1rem;
+}
+.chat-button .arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #1b56ab;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+}
+.chat-button span {
+  margin: 0 2vh;
+}
+
+.chat-button img {
+  width: 2rem;
+}

@@ -1,0 +1,50 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer opened="true" mode="side">
+    <div class="sidebar-navlist">
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <div class="logo">
+            <span class="we"></span>
+            <span class="setinel">WeSentinel</span>
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <mat-nav-list>
+        <mat-list-item>
+          <div class="dashboard">
+            <h3>Dashboard</h3>
+          </div>
+        </mat-list-item>
+        <mat-list-item *ngFor="let link of links">
+          <span [ngClass]="{ active: link.active }"></span>
+          <a matLine href="...">
+            <img
+              src="../../../../assets/images/{{ link.icon }}"
+              alt="{{ link.link }}"
+            />
+            <span class="link-text">{{ link.link }}</span>
+          </a>
+          <button mat-icon-button (click)="showInfo(link)">
+            <span *ngIf="link.notifications" class="category-badge">
+              <span>{{ link.notifications }}</span>
+            </span>
+          </button>
+        </mat-list-item>
+      </mat-nav-list>
+      <div class="logout-button">
+        <button>
+          <img src="../../../../assets/images/logout.png" alt="logout" />
+        </button>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-top-nav
+      style="width: 100%"
+      (drawerToggle)="drawerToggle()"
+    ></app-top-nav>
+    <div class="main-container">
+      <app-main></app-main>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

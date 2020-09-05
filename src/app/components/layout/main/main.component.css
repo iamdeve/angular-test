@@ -1,0 +1,218 @@
+.section-1 {
+  width: 100%;
+}
+h4 {
+  font-size: 1rem;
+}
+.log-box {
+  background: #f6f7fa;
+  margin: 2vh 0;
+  padding: 2vh;
+}
+
+.log-box .title {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.log-box .title img {
+  margin: 0 1vh;
+}
+.log-box .title .title-text {
+  font-size: 0.94rem;
+}
+
+.log-box .title .time {
+  font-size: 0.64rem;
+  position: absolute;
+  right: 0;
+  padding: 0px 3px;
+  border: 1px solid #cccdcd;
+  color: #cccdcd;
+}
+
+.log-box .desc {
+  font-size: 0.85rem;
+}
+.log-box .desc .user {
+  color: #a6d9ea;
+}
+
+.log-box .link {
+  font-size: 0.94rem;
+}
+.log-box .link a {
+  text-decoration: underline;
+}
+.bordered {
+  border: 1px solid #ccc;
+  color: #767676;
+  font-size: 0.85rem;
+  padding: 1vh;
+  margin: 1vh 0;
+}
+.accounting-container {
+  margin: 2vh 0;
+}
+
+.bordered .box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1vh;
+}
+
+.bordered .box img {
+  width: 3rem;
+  margin: 0 2vh;
+}
+
+.bordered .box .inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.bordered .box .inner .value {
+  font-size: 1.2rem;
+}
+.bordered .box .inner {
+  font-weight: 600;
+  color: #333;
+}
+.details-container li.active a {
+  background: #1b56ab;
+  color: #fff;
+  margin-right: 2vh;
+}
+.details-container li.active a {
+  background: #[options]= "lineChartOptions";
+  color: #fff;
+}
+.details-container a:hover {
+  text-decoration: none;
+}
+.details-container a {
+  color: #333;
+}
+
+.single-progress-details {
+  margin: 1vh;
+}
+
+.details-progress {
+}
+
+.details-progress .title {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.85rem;
+}
+.details-progress .value {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.details-progress .progress-contianer {
+  position: relative;
+}
+.progress-contianer .progress-bar-bg {
+  height: 3px;
+  background: #ccc;
+  position: relative;
+}
+
+.progress-contianer .progress-step {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  top: -1rem;
+}
+
+.all-progress-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.status {
+  /* background: blue; */
+  height: 5px;
+  /* width: 55%; */
+  position: absolute;
+  top: -1px;
+}
+.demo-chart {
+  height: 250px;
+  width: 100%;
+}
+
+.PL {
+  padding-left: 0;
+}
+.job-all-progress {
+  margin: 2vh 0;
+}
+.job-all-progress .jobs-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.job-all-progress .complete {
+  width: 10%;
+}
+.job-all-progress .line {
+  width: 30%;
+  height: 2px;
+  background: #ccc;
+}
+.job-all-progress .title {
+  width: 40%;
+}
+
+.overview {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.overview img {
+  margin: 0 2vh;
+}
+.stats {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.btn-view-contact {
+  margin: 1rem 0;
+}
+.contact-btn {
+  background: #1b56ab;
+  width: 100%;
+  color: #fff;
+}
+
+.job-progress-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.chart-cnvas{
+  width:"100%";
+  height:"60"
+}
+@media screen and (max-width: 2600px) and (min-width: 1770px) {
+  .height-bordered {
+    height: 27rem;
+  }
+}
+
+@media screen and (max-width: 1770px) and (min-width: 1330px) {
+  .height-bordered {
+    height: 22rem;
+  }
+}

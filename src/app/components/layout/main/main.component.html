@@ -1,0 +1,222 @@
+<div class="section-1">
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-9">
+          <div class="announcment-container">
+            <h4>
+              <img
+                src="../../../../assets/images/announcement.png"
+                alt="announcement.png"
+              />
+              &nbsp;Latest Announcement
+            </h4>
+            <div class="announcments">
+              <div class="row">
+                <div
+                  *ngFor="
+                    let ann of [
+                      'New jobs comming',
+                      'Your SIA lisence is expiring in 2 days, Make sure to update it',
+                      'Jobs closed',
+                      'On Vacations'
+                    ]
+                  "
+                  class="col-6"
+                >
+                  <div class="bordered">
+                    {{ ann }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accounting-container">
+            <h4>
+              <img
+                src="../../../../assets/images/accounting.png"
+                alt="accounting.png"
+              />
+              &nbsp;Accounting
+            </h4>
+            <div class="accouting">
+              <div class="row">
+                <div *ngFor="let acc of accounts" class="col-4">
+                  <div class="bordered">
+                    <div class="box">
+                      <img src="../../../../assets/images/{{ acc.icon }}" />
+                      <div class="inner">
+                        <span class="value">{{
+                          acc.value | currency: "USD"
+                        }}</span>
+                        <span class="title">{{ acc.title }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <div class="row">
+              <div class="col-8">
+                <div class="bordered height-bordered">
+                  <ul class="nav nav-pills">
+                    <li class="active">
+                      <a data-toggle="tab" mat-button href="#buyers">Buyers</a>
+                    </li>
+                    <li>
+                      <a data-toggle="tab" mat-button href="#suppliers"
+                        >Suppliers</a
+                      >
+                    </li>
+                  </ul>
+
+                  <div class="tab-content">
+                    <div id="buyers" class="tab-pane fade in show active">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="all-progress-details">
+                            <div
+                              *ngFor="let acc of accounts"
+                              class="single-progress-details"
+                            >
+                              <div class="details-progress">
+                                <div class="title">{{ acc.title }}</div>
+                                <div class="value">
+                                  {{ acc.value | currency: "USD" }}
+                                </div>
+                                <div class="progress-contianer">
+                                  <div class="progress-step">
+                                    +{{ acc.step }}
+                                  </div>
+                                  <div class="progress-bar-bg">
+                                    <div
+                                      style="width:{{
+                                        acc.progress
+                                      }}; background:{{ acc.color }}"
+                                      class="status"
+                                    ></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8">
+                          <canvas
+                            class="chart-cnvas"
+                            baseChart
+                           
+                            [datasets]="lineChartData"
+                            [labels]="lineChartLabels"
+                            [options]="lineChartOptions"
+                            [colors]="lineChartColors"
+                            [legend]="lineChartLegend"
+                            [chartType]="lineChartType"
+                            [plugins]="lineChartPlugins"
+                          >
+                          </canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="suppliers" class="tab-pane fade">
+                      <p>...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="bordered height-bordered">
+                  <ul class="nav nav-pills">
+                    <li class="active">
+                      <a data-toggle="tab" mat-button href="#completed"
+                        >Completed</a
+                      >
+                    </li>
+                    <li>
+                      <a data-toggle="tab" mat-button href="#scheduled"
+                        >Scheduled</a
+                      >
+                    </li>
+                  </ul>
+
+                  <div style="height: 100%" class="tab-content">
+                    <div
+                      id="completed"
+                      style="height: 100%"
+                      class="tab-pane fade in show active"
+                    >
+                      <div class="job-progress-container">
+                        <div class="overview">
+                          <div class="stats">100</div>
+                          <div>
+                            <img
+                              src="../../../../assets/images/tick.png"
+                              alt="tick-icon"
+                            />
+                            <span>Complete</span>
+                          </div>
+                        </div>
+                        <div class="job-all-progress">
+                          <div
+                            *ngFor="let job of jobs"
+                            class="single-progress-jobs"
+                          >
+                            <div class="jobs-progress">
+                              <div class="complete">{{ job.completed }}</div>
+                              <div class="line"></div>
+                              <div class="title">{{ job.title }}</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text-center btn-view-contact">
+                          <button class="contact-btn" mat-button>
+                            View All Contacts
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="scheduled" class="tab-pane fade">
+                      <p>...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="logs-container">
+            <h4>
+              <img src="../../../../assets/images/logs.png" alt="logs" />
+              &nbsp;Logs
+            </h4>
+            <div class="logs">
+              <div *ngFor="let log of logs" class="log-box">
+                <div class="title">
+                  <img
+                    src="../../../../assets/images/{{ log.icon }}.png"
+                    alt="{{ log.title }}"
+                  />
+                  <span class="title-text">{{ log.title }}</span>
+                  <span class="time">{{ log.time }}</span>
+                </div>
+                <div class="desc">
+                  <span class="user">{{ log.user }}</span
+                  ><span> {{ log.desc }}</span>
+                </div>
+                <div class="link">
+                  <a href="#">{{ log.link }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
