@@ -3,6 +3,7 @@
 }
 h4 {
   font-size: 1rem;
+  font-weight: 600;
 }
 .log-box {
   background: #f6f7fa;
@@ -49,8 +50,9 @@ h4 {
   border: 1px solid #ccc;
   color: #767676;
   font-size: 0.85rem;
-  padding: 1vh;
-  margin: 1vh 0;
+  padding: 0.41rem 0.8rem;
+  margin: 0.3rem 0;
+  word-spacing: -0.2rem;
 }
 .accounting-container {
   margin: 2vh 0;
@@ -60,7 +62,6 @@ h4 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 1vh;
 }
 
 .bordered .box img {
@@ -83,11 +84,16 @@ h4 {
 .details-container li.active a {
   background: #1b56ab;
   color: #fff;
-  margin-right: 2vh;
+  margin-right: 0.3rem;
 }
 .details-container li.active a {
-  background: #[options]= "lineChartOptions";
+  background: #1b56ab;
   color: #fff;
+  background: #1b56ab;
+  color: #fff;
+  border-radius: 0;
+  padding: 0rem 1rem;
+  font-size: 12px;
 }
 .details-container a:hover {
   text-decoration: none;
@@ -109,7 +115,7 @@ h4 {
   font-size: 0.85rem;
 }
 .details-progress .value {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   color: #333;
   font-size: 1rem;
   font-weight: 600;
@@ -149,12 +155,20 @@ h4 {
   height: 250px;
   width: 100%;
 }
-
+.blue {
+  background: blue;
+}
+.pink {
+  background: orange;
+}
+.orange {
+  background: pink;
+}
 .PL {
   padding-left: 0;
 }
 .job-all-progress {
-  margin: 2vh 0;
+  margin: 0.5rem 0;
 }
 .job-all-progress .jobs-progress {
   display: flex;
@@ -174,7 +188,7 @@ h4 {
 }
 
 .overview {
-  margin: 1rem 0;
+  margin: 0.4rem 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -187,32 +201,83 @@ h4 {
   font-weight: 500;
 }
 .btn-view-contact {
-  margin: 1rem 0;
+  margin: 0.4rem 0;
 }
 .contact-btn {
   background: #1b56ab;
   width: 100%;
   color: #fff;
 }
-
+.all-content-wrapper {
+  height: 100%;
+  bottom: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
 .job-progress-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.chart-cnvas{
-  width:"100%";
-  height:"60"
+.chart-wrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: column-reverse;
+}
+.chart-cnvas {
+  width: 100% !important;
+  height: 180px !important;
+}
+.height-bordered {
+  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chat-icon {
+  position: absolute;
+  z-index: 9999999;
 }
 @media screen and (max-width: 2600px) and (min-width: 1770px) {
   .height-bordered {
-    height: 27rem;
+    min-height: 20rem;
+  }
+  .chat-icon {
+    bottom: 4rem;
   }
 }
 
-@media screen and (max-width: 1770px) and (min-width: 1330px) {
+@media screen and (max-width: 1770px) and (min-width: 1540px) {
   .height-bordered {
-    height: 22rem;
+    min-height: 20rem;
+  }
+  .chart-cnvas {
+    width: 100% !important;
+    height: 240px !important;
+  }
+  .chat-icon {
+    bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 1540px) and (min-width: 1024px) {
+  .height-bordered {
+    min-height: 15rem;
+  }
+  .chart-cnvas {
+    width: 100% !important;
+    height: 160px !important;
+  }
+  .details-progress .value {
+    margin-bottom: 0.1rem;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .stats {
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 }

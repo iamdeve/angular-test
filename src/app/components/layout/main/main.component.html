@@ -1,5 +1,5 @@
 <div class="section-1">
-  <div class="row">
+  <div class="">
     <div class="col-12">
       <div class="row">
         <div class="col-9">
@@ -76,49 +76,51 @@
 
                   <div class="tab-content">
                     <div id="buyers" class="tab-pane fade in show active">
-                      <div class="row">
-                        <div class="col-4">
-                          <div class="all-progress-details">
-                            <div
-                              *ngFor="let acc of accounts"
-                              class="single-progress-details"
-                            >
-                              <div class="details-progress">
-                                <div class="title">{{ acc.title }}</div>
-                                <div class="value">
-                                  {{ acc.value | currency: "USD" }}
-                                </div>
-                                <div class="progress-contianer">
-                                  <div class="progress-step">
-                                    +{{ acc.step }}
+                      <div class="all-content-wrapper">
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="all-progress-details">
+                              <div
+                                *ngFor="let acc of accounts"
+                                class="single-progress-details"
+                              >
+                                <div class="details-progress">
+                                  <div class="title">{{ acc.title }}</div>
+                                  <div class="value">
+                                    {{ acc.value | currency: "USD" }}
                                   </div>
-                                  <div class="progress-bar-bg">
-                                    <div
-                                      style="width:{{
-                                        acc.progress
-                                      }}; background:{{ acc.color }}"
-                                      class="status"
-                                    ></div>
+                                  <div class="progress-contianer">
+                                    <div class="progress-step">
+                                      +{{ acc.step }}
+                                    </div>
+                                    <div class="progress-bar-bg">
+                                      <div
+                                        [ngStyle]="{ width: acc.progress }"
+                                        [ngClass]="['status', acc.color]"
+                                      ></div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-8">
-                          <canvas
-                            class="chart-cnvas"
-                            baseChart
-                           
-                            [datasets]="lineChartData"
-                            [labels]="lineChartLabels"
-                            [options]="lineChartOptions"
-                            [colors]="lineChartColors"
-                            [legend]="lineChartLegend"
-                            [chartType]="lineChartType"
-                            [plugins]="lineChartPlugins"
-                          >
-                          </canvas>
+                          <div class="col-8">
+                            <div class="chart-wrapper">
+                              <canvas
+                                class="chart-cnvas"
+                                baseChart
+                                height="160"
+                                [datasets]="lineChartData"
+                                [labels]="lineChartLabels"
+                                [options]="lineChartOptions"
+                                [colors]="lineChartColors"
+                                [legend]="lineChartLegend"
+                                [chartType]="lineChartType"
+                                [plugins]="lineChartPlugins"
+                              >
+                              </canvas>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -213,6 +215,9 @@
                   <a href="#">{{ log.link }}</a>
                 </div>
               </div>
+            </div>
+            <div class="chat-icon">
+              <app-chat></app-chat>
             </div>
           </div>
         </div>
