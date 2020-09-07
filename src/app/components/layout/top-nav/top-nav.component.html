@@ -20,7 +20,23 @@
       mat-icon-button
       class="example-icon favorite-icon"
       aria-label="Example icon-button with bell icon"
+      [matMenuTriggerFor]="notifyMenu"
+      (click)="openNotifyMenu()"
     >
+      <mat-menu #notifyMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>notification_important</mat-icon>
+          <span>Notification 1</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notification_important</mat-icon>
+          <span>Notification 2</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notification_important</mat-icon>
+          <span>Notification 3</span>
+        </button>
+      </mat-menu>
       <span class="badge-notification">
         <span>5</span>
       </span>
@@ -30,7 +46,24 @@
       mat-icon-button
       class="example-icon"
       aria-label="Example icon-button with message icon"
+      mat-button
+      [matMenuTriggerFor]="messagaMenu"
+      (click)="openMessagaMenu()"
     >
+      <mat-menu #messagaMenu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>face</mat-icon>
+          <span>Message 1</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>face</mat-icon>
+          <span>Message 2</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>face</mat-icon>
+          <span>Message 3</span>
+        </button>
+      </mat-menu>
       <span class="badge-message">
         <span>6</span>
       </span>
