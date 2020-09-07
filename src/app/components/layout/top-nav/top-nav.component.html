@@ -20,10 +20,11 @@
       mat-icon-button
       class="example-icon favorite-icon"
       aria-label="Example icon-button with bell icon"
-      [matMenuTriggerFor]="notifyMenu"
+      [matMenuTriggerFor]="notifyaMenu"
+      #notifyMenu="matMenuTrigger"
       (click)="openNotifyMenu()"
     >
-      <mat-menu #notifyMenu="matMenu">
+      <mat-menu #notifyaMenu="matMenu">
         <button mat-menu-item>
           <mat-icon>notification_important</mat-icon>
           <span>Notification 1</span>
@@ -48,9 +49,10 @@
       aria-label="Example icon-button with message icon"
       mat-button
       [matMenuTriggerFor]="messagaMenu"
+      #messageMenu="matMenuTrigger"
       (click)="openMessagaMenu()"
     >
-      <mat-menu #messagaMenu="matMenu">
+      <mat-menu  #messagaMenu="matMenu">
         <button mat-menu-item>
           <mat-icon>face</mat-icon>
           <span>Message 1</span>

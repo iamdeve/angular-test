@@ -14,8 +14,8 @@ import { MatMenuTrigger } from '@angular/material/menu';
 })
 export class TopNavComponent implements OnInit {
   @Output() drawerToggle = new EventEmitter();
-  @ViewChild(MatMenuTrigger) notifyMenu: MatMenuTrigger;
-  @ViewChild(MatMenuTrigger) messageMenu: MatMenuTrigger;
+  @ViewChild('notifyMenu') notifyMenu: MatMenuTrigger;
+  @ViewChild('messageMenu') messageMenu: MatMenuTrigger;
 
   constructor() {}
   openMessagaMenu() {
